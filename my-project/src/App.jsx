@@ -5,6 +5,9 @@ import WatchList from './components/WatchList'
 
 
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
+import Banner from './components/Banner';
+import MoviesList from './components/MoviesList';
+import Count from './components/demo/Count';
 const App = () => {
   return (
     <>
@@ -12,8 +15,14 @@ const App = () => {
     <Navbar />
     <Routes >
 
-      <Route path='/' element={<Movies />} />
+      <Route path='/' element={<>
+     
+        <Banner />
+        <Movies />
+        </>} />
       <Route path='/watchlist' element={<WatchList />} />
+      <Route path='/movieslist' element={<MoviesList />} />
+      <Route path='/count' element={<Count />} />
 
     </Routes>
    
